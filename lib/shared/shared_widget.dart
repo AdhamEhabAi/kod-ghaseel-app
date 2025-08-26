@@ -206,7 +206,7 @@ class DefaultButton extends StatelessWidget {
         disabledBackgroundColor: disableColor ?? AppStyle.purple100,
         backgroundColor: backgroundColorButton ?? AppStyle.primaryColor,
         minimumSize: Size(width ?? double.infinity, height ?? 48.h),
-        elevation: 1,
+        elevation: 0.0,
         shape: RoundedRectangleBorder(
           side: BorderSide(
             width: 1,
@@ -223,7 +223,7 @@ class DefaultButton extends StatelessWidget {
                   buttonTitle!,
                   style: style ??
                       Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          fontFamily: AppStyle.lexendFont,
+                          fontFamily: AppStyle.cairoFont,
                         fontSize: 18.sp,
                           color: onPressed == null
                               ? AppStyle.white

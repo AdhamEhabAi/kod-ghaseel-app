@@ -11,6 +11,7 @@ class AppRouter{
   static var globalNavKey = GlobalKey<NavigatorState>();
 
   static final GoRouter router = GoRouter(
+    initialLocation: splashScreen,
     debugLogDiagnostics: true,
     navigatorKey: globalNavKey,
     //initialLocation: signupScreen,

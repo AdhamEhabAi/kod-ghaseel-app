@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kod_ghaseel_app/Utilites/app_assets/assets.dart';
 import 'package:kod_ghaseel_app/core/router/router.dart';
@@ -29,10 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Hero(
-        tag: 'splash',
-        child: Center(child: Image.asset(Assets.splashImage)),
-      ),
+      body: Center(child: SvgPicture.asset(Assets.splashImage)),
     );
   }
 }
