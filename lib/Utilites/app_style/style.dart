@@ -132,7 +132,7 @@ class AppStyle {
     // Theme depends on language font family + colors -> clear to avoid stale entries
     FlyweightTextStyles.clear();
 
-    final fontFamily = languageCode == 'ar' ? cairoFont : poppinsFont;
+    final fontFamily =  cairoFont;
 
     return ThemeData(
       useMaterial3: true,
@@ -184,7 +184,7 @@ class AppStyle {
         style: ButtonStyle(
           textStyle: WidgetStateProperty.all<TextStyle>(
             _ts(
-              fontFamily: languageCode == 'ar' ? AppStyle.cairoFont : AppStyle.lexendFont,
+              fontFamily:  AppStyle.cairoFont ,
               fontSize: 16.sp,
               fontWeight: FontWeight.w400,
             ),
@@ -199,7 +199,7 @@ class AppStyle {
     );
   }
 
-  static Color primaryColor = const Color(0xff5300BC);
+  static Color primaryColor = const Color(0xFF01D0FE);
   static Color secColor = const Color(0xff04DCEF);
   static Color bottomBar = const Color(0xff9200ED);
   static const Color cardBgLightColor = Color(0xff999999);
@@ -251,10 +251,8 @@ class AppStyle {
   static Color cardColor = const Color(0xff3B82F6);
 
   // NOTE: Your current fonts all point to 'Poppins'. Keep as-is.
-  static const String cairoFont = 'Poppins';
-  static const String lexendFont = 'Poppins';
-  static const String lnterFont = 'Poppins';
-  static const String poppinsFont = 'Poppins';
+  static const String cairoFont = 'Cairo';
+
 
   static const Color grey = Color(0xFFE0E0E0);
   static const Color lightGrey = Colors.grey;
@@ -294,7 +292,7 @@ class AppStyle {
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     useMaterial3: true,
-    fontFamily: lexendFont,
+    fontFamily: cairoFont,
     primarySwatch: Colors.blue,
     primaryColor: primaryColor,
     scaffoldBackgroundColor: white,
@@ -326,14 +324,14 @@ class AppStyle {
         color: white,
         fontSize: 14.spMin,
         fontWeight: FontWeight.w400,
-        fontFamily: lexendFont,
+        fontFamily: cairoFont,
         height: 0.10,
       ),
       titleLarge: _ts(
         color: black,
         fontSize: 32.sp,
         fontWeight: FontWeight.w600,
-        fontFamily: lexendFont,
+        fontFamily: cairoFont,
       ),
       titleSmall: _ts(
         color: black,
@@ -344,7 +342,7 @@ class AppStyle {
         color: black,
         fontSize: 14.sp,
         fontWeight: FontWeight.w300,
-        fontFamily: lexendFont,
+        fontFamily: cairoFont,
       ),
       labelLarge: _ts(
         color: black,

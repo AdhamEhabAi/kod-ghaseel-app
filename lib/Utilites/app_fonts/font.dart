@@ -15,7 +15,7 @@ class AppTextStyle {
       fontWeight: fontWeight,
       color: color,
       decoration: decoration,
-      fontFamily: AppStyle.poppinsFont,
+      fontFamily: AppStyle.cairoFont,
     );
   }
 
@@ -27,6 +27,11 @@ class AppTextStyle {
         fontWeight: FontWeight.w400,
         color: AppStyle.primaryColor,
       );
+  static TextStyle get primaryW600Size16 => _ts(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+    color: AppStyle.primaryColor,
+  );
 
   static TextStyle get blackW600Size24Roboto =>
       _ts(fontSize: 24.sp, fontWeight: FontWeight.w600, color: AppStyle.black);
@@ -45,6 +50,10 @@ class AppTextStyle {
 
   static TextStyle get whiteW600Size12Roboto =>
       _ts(fontSize: 12.sp, fontWeight: FontWeight.w600, color: AppStyle.white);
+  static TextStyle get whiteW600Size16Roboto =>
+      _ts(fontSize: 16.sp, fontWeight: FontWeight.w600, color: AppStyle.white);
+  static TextStyle get whiteW800Size28Roboto =>
+      _ts(fontSize: 28.sp, fontWeight: FontWeight.w800, color: AppStyle.white);
 
   static TextStyle get blackW400Size14Roboto => _ts(
       fontSize: 14.sp, fontWeight: FontWeight.w400, color: AppStyle.subTitle);
@@ -159,40 +168,40 @@ class AppTextStyle {
           height: 0.10,
           fontSize: 14.spMin,
           fontWeight: FontWeight.w400,
-          fontFamily: AppStyle.poppinsFont,
+          fontFamily: AppStyle.cairoFont,
         ),
         titleLarge: AppTextStyle.blackBoldSize32,
         titleSmall: AppTextStyle.blackW200Size14,
         labelSmall: AppTextStyle.blackW200Size14.copyWith(
           fontWeight: FontWeight.w300,
-          fontFamily: AppStyle.poppinsFont,
+          fontFamily: AppStyle.cairoFont,
         ),
         labelLarge: AppTextStyle.blackW500Size16,
         labelMedium: AppTextStyle.blackW200Size14.copyWith(
           fontWeight: FontWeight.w400,
-          fontFamily: AppStyle.poppinsFont,
+          fontFamily: AppStyle.cairoFont,
         ),
         displaySmall: AppTextStyle.whiteW500Size16.copyWith(
           fontWeight: FontWeight.w400,
-          fontFamily: AppStyle.poppinsFont,
+          fontFamily: AppStyle.cairoFont,
         ),
         displayMedium: AppTextStyle.whiteW500Size16.copyWith(
           fontWeight: FontWeight.w200,
-          fontFamily: AppStyle.poppinsFont,
+          fontFamily: AppStyle.cairoFont,
         ),
         headlineMedium: AppTextStyle.whiteW500Size16,
         titleMedium: AppTextStyle.whiteW500Size16.copyWith(
           fontWeight: FontWeight.w600,
           fontSize: 18.sp,
-          fontFamily: AppStyle.poppinsFont,
+          fontFamily: AppStyle.cairoFont,
         ),
         displayLarge: AppTextStyle.blackOpacityW700Size18.copyWith(
           fontWeight: FontWeight.w400,
-          fontFamily: AppStyle.poppinsFont,
+          fontFamily: AppStyle.cairoFont,
         ),
         bodyLarge: AppTextStyle.blackW700Size30.copyWith(
           fontSize: 28.sp,
-          fontFamily: AppStyle.poppinsFont,
+          fontFamily: AppStyle.cairoFont,
         ),
       );
 }

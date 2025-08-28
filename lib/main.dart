@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kod_ghaseel_app/Utilites/app_style/style.dart';
 import 'generated/l10n.dart';
 import 'package:kod_ghaseel_app/core/router/router.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,40 +18,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MediaQuery(
-      data: MediaQuery.of(context).copyWith(
-        textScaler: TextScaler.noScaling,
-      ),
+      data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
       child: ScreenUtilInit(
         designSize: const Size(360, 800),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
           return MaterialApp.router(
-            title: 'Flutter Demo',
-            theme: ThemeData(
-              // This is the theme of your application.
-              //
-              // TRY THIS: Try running your application with "flutter run". You'll see
-              // the application has a purple toolbar. Then, without quitting the app,
-              // try changing the seedColor in the colorScheme below to Colors.green
-              // and then invoke "hot reload" (save your changes or press the "hot
-              // reload" button in a Flutter-supported IDE, or press "r" if you used
-              // the command line to start the app).
-              //
-              // Notice that the counter didn't reset back to zero; the application
-              // state is not lost during the reload. To reset the state, use hot
-              // restart instead.
-              //
-              // This works for code too, not just values: Most code changes can be
-              // tested with just a hot reload.
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-            ),
+            debugShowCheckedModeBanner: false,
+            locale: Locale('ar'),
+            theme: AppStyle.lightTheme,
+            darkTheme: AppStyle.darkTheme,
             routerConfig: AppRouter.router,
             themeMode: ThemeMode.light,
-            supportedLocales: [
-              Locale('ar'),
-            ],
-            localizationsDelegates:  [
+            supportedLocales: [Locale('ar')],
+            localizationsDelegates: [
               S.delegate,
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
