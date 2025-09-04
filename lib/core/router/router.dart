@@ -31,6 +31,17 @@ class AppRouter{
           builder: (BuildContext context, GoRouterState state) {
             return const OnboardingScreen();
           }),
+
+      // ------------ example to how to use the transition
+
+      // GoRoute(
+      //   path: onboardingScreen,
+      //   pageBuilder: (context, state) => TransitionHelper.page(
+      //     state: state,
+      //     child: const OnboardingScreen(),
+      //     transition: AppTransition.slideFromRight,
+      //   ),
+      // ),
     ],
   );
 
